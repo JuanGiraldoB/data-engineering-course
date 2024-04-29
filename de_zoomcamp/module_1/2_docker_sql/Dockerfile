@@ -1,8 +1,9 @@
 FROM python:3.12
 
-RUN pip install pandas
+RUN apt-get install curl
+RUN pip install pandas sqlalchemy pyarrow psycopg2
 
 WORKDIR /app
-COPY pipeline.py pipeline.py
+COPY upload_data.py upload_data.py
 
-ENTRYPOINT [ "python", "pipeline.py" ]
+ENTRYPOINT [ "python", "upload_data.py" ]
