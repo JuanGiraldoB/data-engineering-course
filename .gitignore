@@ -1,4 +1,5 @@
 ny*
 .env
 yellow_tripdata_2021-01.csv
-*.parquet
+*.parquet 
+*.pub
